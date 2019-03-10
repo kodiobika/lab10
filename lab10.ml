@@ -494,6 +494,9 @@ let rec time_divider (n : int) : int =
   if n = 0 || n = 1 then k
   else k + time_divider (n / 2);;
 
+let divider_complexity () : complexity =
+  Logarithmic;;
+
 (*......................................................................
 Exercise 12: Find_min recurrence equations
 
