@@ -490,14 +490,9 @@ let rec divider (x : int) : int =
   else if x <= 1 then 0
   else 1 + divider (x / 2);;
 
-  let rec divider (x : int) : int =
-    if x < 0 then raise (Invalid_argument "only positive numbers accepted")
-    else if x <= 1 then 0
-    else 1 + divider (x / 2);;
-
-  let rec time_divider (n : int) : int =
-    if n = 0 || n = 1 then k
-    else k + time_divider (n / 2);;
+let rec time_divider (n : int) : int =
+  if n = 0 || n = 1 then k
+  else k + time_divider (n / 2);;
 
 (*......................................................................
 Exercise 12: Find_min recurrence equations
